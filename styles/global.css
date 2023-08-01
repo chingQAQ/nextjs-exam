@@ -1,0 +1,29 @@
+/* 新增 styles/global.css */
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    line-height: 1.4;
+    background-color: black;
+    color: white;
+    width: 100%;
+    max-width: 900px;
+}
+
+.products {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    list-style: none;
+}
+
+.products__item img {
+    width: 100%;
+}
+
+.product img {
+    width: 400px;
+}

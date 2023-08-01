@@ -1,0 +1,6 @@
+{
+    "verbose": true,
+    "ignore": ["node_modules", ".next"],
+    "watch": ["pages/**/*", "server.ts"],
+    "ext": "ts tsx"
+}
