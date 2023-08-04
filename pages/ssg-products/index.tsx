@@ -1,20 +1,19 @@
 import Link from 'next/link';
-import { BASE_URL } from '../api/constants'
+import { fetchAllProduct } from '../api/products'
 import type { GetStaticProps } from "next";
 
+/* __N_SSG is true */
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(BASE_URL)
-  const products = await res.json()
- 
-  return {
-    props: {
-      products,
-    },
-  }
+    const products = await fetchAllProduct();
+
+    return {
+        props: {
+            products,
+        },
+    }
 }
 
-export default function Products({ products }) {
-    // const router = useRouter();
+export default function Page({ products }) {
     return (
         <section>
             <h1>Products</h1>
